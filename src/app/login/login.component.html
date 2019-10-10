@@ -1,0 +1,35 @@
+<div id="login">
+  <div class="container">
+    <br>
+    <br>
+    <p><img src="assets/images/bg1.jpg" alt='healthcare' style='height: 10rem; width: 12rem'></p>
+    <h3>Login to HealthCare</h3>
+    <br />
+    <div class="container">
+      <div class="alert alert-warning" *ngIf="invalidLogin">
+        {{ errorMessage }}
+      </div>
+
+      <div class="container">
+        User Name : <input type="text" name="username" [(ngModel)]='username' />
+        <br />
+        <br />
+        Password &nbsp; &nbsp;:
+        <input type="password" name="password" [(ngModel)]='password' />
+        <br />
+        <br />
+
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <div class='wrapper'>
+    <div>
+      <button (click)="handleLogin()" class="btn btn-success">Login</button>
+    </div>
+    <div>
+    </div>
+    
+  </div>
+</div>
